@@ -600,11 +600,6 @@ export const sendSellerApplicationRejectedEmail =
     });
   };
 
-
-// ======================================================
-// VERIFY SMTP
-// ======================================================
-
 export const verifySellerMailer =
   async () => {
     try {
