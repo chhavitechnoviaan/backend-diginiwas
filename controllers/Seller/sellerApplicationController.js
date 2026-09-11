@@ -257,31 +257,61 @@ export const createSellerApplication =
                 remarks:
                   "Seller application created",
               },
-
-              {
-                action:
-                  "EMAIL_OTP_SENT",
-
-                remarks:
-                  "Email verification OTP sent",
-              },
             ],
         });
 
       // ==========================================
       // SEND EMAIL OTP
+      // IMPORTANT: seller is already created.
+      // Email failure must NOT convert a successful
+      // DB registration into HTTP 500.
       // ==========================================
 
-      await sendSellerEmailOtp({
-        to:
-          seller.email,
+      let emailSent = false;
+      let emailErrorMessage = null;
 
-        name:
-          seller.name,
+      try {
+        await sendSellerEmailOtp({
+          to:
+            seller.email,
 
-        otp:
-          emailOtp,
-      });
+          name:
+            seller.name,
+
+          otp:
+            emailOtp,
+        });
+
+        emailSent = true;
+
+        // Only record EMAIL_OTP_SENT after the mailer
+        // confirms that sendMail completed successfully.
+        pushHistory(
+          seller,
+          "EMAIL_OTP_SENT",
+          "Email verification OTP sent"
+        );
+
+        // History is useful, but a history-save problem
+        // should not make registration look failed.
+        try {
+          await seller.save();
+        } catch (historyError) {
+          console.error(
+            "SELLER EMAIL OTP HISTORY SAVE ERROR:",
+            historyError
+          );
+        }
+      } catch (emailError) {
+        emailErrorMessage =
+          emailError?.message ||
+          "Unable to send verification email";
+
+        console.error(
+          "SELLER REGISTRATION EMAIL OTP ERROR:",
+          emailError
+        );
+      }
 
       // ==========================================
       // RESPONSE
@@ -292,8 +322,9 @@ export const createSellerApplication =
         .json({
           success: true,
 
-          message:
-            "Seller application created successfully. Email OTP sent.",
+          message: emailSent
+            ? "Seller application created successfully. Email OTP sent."
+            : "Seller application created successfully, but the email OTP could not be sent. Please use resend email OTP.",
 
           data: {
             applicationId:
@@ -313,6 +344,15 @@ export const createSellerApplication =
 
             applicationStatus:
               seller.applicationStatus,
+
+            emailSent,
+
+            // Safe diagnostic for frontend/logs; never expose
+            // SMTP credentials or stack traces.
+            emailError:
+              emailSent
+                ? null
+                : emailErrorMessage,
           },
         });
     } catch (

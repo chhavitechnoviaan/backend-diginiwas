@@ -149,6 +149,18 @@ const transporter =
         process.env.SMTP_PASS
           ?.replace(/\s/g, ""),
     },
+
+    // Do not let a broken SMTP connection keep an API
+    // request waiting for ~2 minutes on Render.
+    connectionTimeout: Number(
+      process.env.SMTP_CONNECTION_TIMEOUT || 10000
+    ),
+    greetingTimeout: Number(
+      process.env.SMTP_GREETING_TIMEOUT || 10000
+    ),
+    socketTimeout: Number(
+      process.env.SMTP_SOCKET_TIMEOUT || 15000
+    ),
   });
 
 // ======================================================
@@ -599,6 +611,11 @@ export const sendSellerApplicationRejectedEmail =
       `,
     });
   };
+
+
+// ======================================================
+// VERIFY SMTP
+// ======================================================
 
 export const verifySellerMailer =
   async () => {
