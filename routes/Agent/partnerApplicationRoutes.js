@@ -1,0 +1,15 @@
+import express from "express";
+import { registerPartnerApplication, resendPartnerOtp, verifyPartnerEmailOtp, verifyPartnerPhoneOtp, getPartnerApplications, getPartnerApplicationById, approvePartnerApplication, markPartnerVerified, requestPartnerAction, rejectPartnerApplication } from "../../controllers/Agent/partnerApplicationController.js";
+import { protect } from "../../middleware/authMiddleware.js";
+const router = express.Router();
+router.post("/register", registerPartnerApplication);
+router.post("/:id/resend-otp", resendPartnerOtp);
+router.patch("/:id/verify-email", verifyPartnerEmailOtp);
+router.patch("/:id/verify-phone", verifyPartnerPhoneOtp);
+router.get("/", protect, getPartnerApplications);
+router.get("/:id", protect, getPartnerApplicationById);
+router.patch("/:id/approve", protect, approvePartnerApplication);
+router.patch("/:id/verify", protect, markPartnerVerified);
+router.patch("/:id/action-required", protect, requestPartnerAction);
+router.patch("/:id/reject", protect, rejectPartnerApplication);
+export default router;

@@ -1,0 +1,3845 @@
+[
+  {
+    "method": "GET",
+    "path": "/admin/dashboard/lead-analytics",
+    "v1_path": "/api/v1/admin/dashboard/lead-analytics",
+    "legacy_path": "/api/admin/dashboard/lead-analytics",
+    "access": "Admin Bearer",
+    "handler": "getLeadAnalytics",
+    "route_file": "routes/Admin/dashboardRoutes.js",
+    "controller_file": "controllers/Admin/dashboardController.js",
+    "path_params": [],
+    "query": [
+      "period"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dashboard/summary",
+    "v1_path": "/api/v1/admin/dashboard/summary",
+    "legacy_path": "/api/admin/dashboard/summary",
+    "access": "Admin Bearer",
+    "handler": "getAdminDashboardSummary",
+    "route_file": "routes/Admin/dashboardRoutes.js",
+    "controller_file": "controllers/Admin/dashboardController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/admin/notifications",
+    "v1_path": "/api/v1/admin/notifications",
+    "legacy_path": "/api/admin/notifications",
+    "access": "Admin Bearer",
+    "handler": "getAdminNotifications",
+    "route_file": "routes/Admin/notificationRoutes.js",
+    "controller_file": "controllers/Admin/notificationController.js",
+    "path_params": [],
+    "query": [
+      "isRead",
+      "limit",
+      "page",
+      "type",
+      "unread"
+    ],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin/notifications/:id/read",
+    "v1_path": "/api/v1/admin/notifications/:id/read",
+    "legacy_path": "/api/admin/notifications/:id/read",
+    "access": "Admin Bearer",
+    "handler": "markAdminNotificationRead",
+    "route_file": "routes/Admin/notificationRoutes.js",
+    "controller_file": "controllers/Admin/notificationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin/notifications/read-all",
+    "v1_path": "/api/v1/admin/notifications/read-all",
+    "legacy_path": "/api/admin/notifications/read-all",
+    "access": "Admin Bearer",
+    "handler": "markAllAdminNotificationsRead",
+    "route_file": "routes/Admin/notificationRoutes.js",
+    "controller_file": "controllers/Admin/notificationController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/admin/profile",
+    "v1_path": "/api/v1/admin/profile",
+    "legacy_path": "/api/admin/profile",
+    "access": "Admin Bearer",
+    "handler": "getAdminProfile",
+    "route_file": "routes/Admin/profileRoutes.js",
+    "controller_file": "controllers/Admin/profileController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin/profile",
+    "v1_path": "/api/v1/admin/profile",
+    "legacy_path": "/api/admin/profile",
+    "access": "Admin Bearer",
+    "handler": "updateAdminProfile",
+    "route_file": "routes/Admin/profileRoutes.js",
+    "controller_file": "controllers/Admin/profileController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/admin/profile/change-password",
+    "v1_path": "/api/v1/admin/profile/change-password",
+    "legacy_path": "/api/admin/profile/change-password",
+    "access": "Admin Bearer",
+    "handler": "changeAdminPassword",
+    "route_file": "routes/Admin/profileRoutes.js",
+    "controller_file": "controllers/Admin/profileController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "currentPassword",
+      "newPassword"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/agents/nearby",
+    "v1_path": "/api/v1/agents/nearby",
+    "legacy_path": "/api/agents/nearby",
+    "access": "Bearer token",
+    "handler": "getNearbyAgents",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [
+      "limit"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "v1_path": "/api/v1/auth/login",
+    "legacy_path": "/api/auth/login",
+    "access": "Public",
+    "handler": "login",
+    "route_file": "routes/cms/authRoutes.js",
+    "controller_file": "controllers/cms/authController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email",
+      "password"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/auths/login-otp",
+    "v1_path": "/api/v1/auths/login-otp",
+    "legacy_path": "/api/auths/login-otp",
+    "access": "Public",
+    "handler": "loginWithOTP",
+    "route_file": "routes/authRoutes.js",
+    "controller_file": "controllers/authController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "otp",
+      "phone",
+      "role"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/auths/login-password",
+    "v1_path": "/api/v1/auths/login-password",
+    "legacy_path": "/api/auths/login-password",
+    "access": "Public",
+    "handler": "loginWithPassword",
+    "route_file": "routes/authRoutes.js",
+    "controller_file": "controllers/authController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "password",
+      "phone",
+      "role"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/auths/register",
+    "v1_path": "/api/v1/auths/register",
+    "legacy_path": "/api/auths/register",
+    "access": "Public",
+    "handler": "register",
+    "route_file": "routes/authRoutes.js",
+    "controller_file": "controllers/authController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email",
+      "location",
+      "name",
+      "partnerType",
+      "password",
+      "phone",
+      "role"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/auths/send-otp",
+    "v1_path": "/api/v1/auths/send-otp",
+    "legacy_path": "/api/auths/send-otp",
+    "access": "Public",
+    "handler": "sendOTP",
+    "route_file": "routes/authRoutes.js",
+    "controller_file": "controllers/authController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "phone",
+      "role"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/blog/admin",
+    "v1_path": "/api/v1/blog/admin",
+    "legacy_path": "/api/blog/admin",
+    "access": "Bearer token",
+    "handler": "getBlogPage",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/blog/admin/articles",
+    "v1_path": "/api/v1/blog/admin/articles",
+    "legacy_path": "/api/blog/admin/articles",
+    "access": "Bearer token",
+    "handler": "getAllBlogArticles",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [
+      "category",
+      "published",
+      "search"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/blog/admin/articles",
+    "v1_path": "/api/v1/blog/admin/articles",
+    "legacy_path": "/api/blog/admin/articles",
+    "access": "Admin Bearer",
+    "handler": "createBlogArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "author",
+      "category",
+      "content",
+      "excerpt",
+      "featured",
+      "publishDate",
+      "published",
+      "readTime",
+      "sortOrder",
+      "title"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/blog/admin/articles/:articleId",
+    "v1_path": "/api/v1/blog/admin/articles/:articleId",
+    "legacy_path": "/api/blog/admin/articles/:articleId",
+    "access": "Admin Bearer",
+    "handler": "deleteBlogArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "articleId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/blog/admin/articles/:articleId",
+    "v1_path": "/api/v1/blog/admin/articles/:articleId",
+    "legacy_path": "/api/blog/admin/articles/:articleId",
+    "access": "Bearer token",
+    "handler": "getBlogArticleById",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "articleId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/articles/:articleId",
+    "v1_path": "/api/v1/blog/admin/articles/:articleId",
+    "legacy_path": "/api/blog/admin/articles/:articleId",
+    "access": "Admin Bearer",
+    "handler": "updateBlogArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "articleId"
+    ],
+    "query": [],
+    "body": [
+      "featured",
+      "publishDate",
+      "published",
+      "sortOrder",
+      "title"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/blog/admin/articles/:articleId/image",
+    "v1_path": "/api/v1/blog/admin/articles/:articleId/image",
+    "legacy_path": "/api/blog/admin/articles/:articleId/image",
+    "access": "Admin Bearer",
+    "handler": "deleteBlogArticleImage",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "articleId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/categories",
+    "v1_path": "/api/v1/blog/admin/categories",
+    "legacy_path": "/api/blog/admin/categories",
+    "access": "Admin Bearer",
+    "handler": "updateBlogCategories",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "categories"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/featured",
+    "v1_path": "/api/v1/blog/admin/featured",
+    "legacy_path": "/api/blog/admin/featured",
+    "access": "Admin Bearer",
+    "handler": "updateFeaturedArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "showAITake"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/blog/admin/featured/image",
+    "v1_path": "/api/v1/blog/admin/featured/image",
+    "legacy_path": "/api/blog/admin/featured/image",
+    "access": "Admin Bearer",
+    "handler": "deleteFeaturedArticleImage",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/hero",
+    "v1_path": "/api/v1/blog/admin/hero",
+    "legacy_path": "/api/blog/admin/hero",
+    "access": "Admin Bearer",
+    "handler": "updateBlogHero",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "aiTag",
+      "buttonLink",
+      "buttonText",
+      "buyerTag",
+      "description",
+      "eyebrow",
+      "headingLine1",
+      "headingLine2",
+      "investmentTag",
+      "marketTag"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/blog/admin/hero/image",
+    "v1_path": "/api/v1/blog/admin/hero/image",
+    "legacy_path": "/api/blog/admin/hero/image",
+    "access": "Admin Bearer",
+    "handler": "deleteBlogHeroImage",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/newsletter",
+    "v1_path": "/api/v1/blog/admin/newsletter",
+    "legacy_path": "/api/blog/admin/newsletter",
+    "access": "Admin Bearer",
+    "handler": "updateBlogNewsletter",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "enabled"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/niwas-ai",
+    "v1_path": "/api/v1/blog/admin/niwas-ai",
+    "legacy_path": "/api/blog/admin/niwas-ai",
+    "access": "Admin Bearer",
+    "handler": "updateBlogNiwasAI",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "buttonLink",
+      "buttonText",
+      "description",
+      "heading",
+      "questions",
+      "title"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/blog/admin/trending",
+    "v1_path": "/api/v1/blog/admin/trending",
+    "legacy_path": "/api/blog/admin/trending",
+    "access": "Admin Bearer",
+    "handler": "createTrendingArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "articleId",
+      "category",
+      "link",
+      "sortOrder",
+      "title"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/blog/admin/trending/:trendingId",
+    "v1_path": "/api/v1/blog/admin/trending/:trendingId",
+    "legacy_path": "/api/blog/admin/trending/:trendingId",
+    "access": "Admin Bearer",
+    "handler": "deleteTrendingArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "trendingId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/blog/admin/trending/:trendingId",
+    "v1_path": "/api/v1/blog/admin/trending/:trendingId",
+    "legacy_path": "/api/blog/admin/trending/:trendingId",
+    "access": "Admin Bearer",
+    "handler": "updateTrendingArticle",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "trendingId"
+    ],
+    "query": [],
+    "body": [
+      "sortOrder"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/blog/articles/slug/:slug",
+    "v1_path": "/api/v1/blog/articles/slug/:slug",
+    "legacy_path": "/api/blog/articles/slug/:slug",
+    "access": "Public",
+    "handler": "getArticleBySlug",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [
+      "slug"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/blog/public",
+    "v1_path": "/api/v1/blog/public",
+    "legacy_path": "/api/blog/public",
+    "access": "Public",
+    "handler": "getPublicBlogPage",
+    "route_file": "routes/cms/blogRoutes.js",
+    "controller_file": "controllers/cms/blogController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/boost-operations/:id",
+    "v1_path": "/api/v1/boost-operations/:id",
+    "legacy_path": "/api/boost-operations/:id",
+    "access": "Admin Bearer",
+    "handler": "getBoostRequestById",
+    "route_file": "routes/Promotion/boostDashboardRoutes.js",
+    "controller_file": "controllers/Promotion/boostDashboardController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/boost-operations/dashboard",
+    "v1_path": "/api/v1/boost-operations/dashboard",
+    "legacy_path": "/api/boost-operations/dashboard",
+    "access": "Admin Bearer",
+    "handler": "getBoostOperationsDashboard",
+    "route_file": "routes/Promotion/boostDashboardRoutes.js",
+    "controller_file": "controllers/Promotion/boostDashboardController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "_id",
+      "limit",
+      "page",
+      "partnerId",
+      "partnerMongoId",
+      "promotionType",
+      "propertyId",
+      "propertyMongoId",
+      "requestId",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/buyers",
+    "v1_path": "/api/v1/buyers",
+    "legacy_path": "/api/buyers",
+    "access": "Admin Bearer",
+    "handler": "getAllBuyers",
+    "route_file": "routes/buyer/buyerRoutes.js",
+    "controller_file": "controllers/Buyer/buyer.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/buyers/:id",
+    "v1_path": "/api/v1/buyers/:id",
+    "legacy_path": "/api/buyers/:id",
+    "access": "Admin Bearer",
+    "handler": "getBuyerById",
+    "route_file": "routes/buyer/buyerRoutes.js",
+    "controller_file": "controllers/Buyer/buyer.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/buyers/:id/dashboard",
+    "v1_path": "/api/v1/buyers/:id/dashboard",
+    "legacy_path": "/api/buyers/:id/dashboard",
+    "access": "Admin Bearer",
+    "handler": "getBuyerDashboard",
+    "route_file": "routes/buyer/buyerRoutes.js",
+    "controller_file": "controllers/Buyer/buyer.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/about-genesis",
+    "v1_path": "/api/v1/cms/about-genesis",
+    "legacy_path": "/api/cms/about-genesis",
+    "access": "Public",
+    "handler": "getAboutGenesis",
+    "route_file": "routes/cms/aboutGenesisRoutes.js",
+    "controller_file": "controllers/cms/aboutGenesisController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/about-genesis",
+    "v1_path": "/api/v1/cms/about-genesis",
+    "legacy_path": "/api/cms/about-genesis",
+    "access": "Admin Bearer",
+    "handler": "updateAboutGenesis",
+    "route_file": "routes/cms/aboutGenesisRoutes.js",
+    "controller_file": "controllers/cms/aboutGenesisController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "heading",
+      "paragraph1",
+      "paragraph2",
+      "quote",
+      "topTitle"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/about-genesis/image",
+    "v1_path": "/api/v1/cms/about-genesis/image",
+    "legacy_path": "/api/cms/about-genesis/image",
+    "access": "Admin Bearer",
+    "handler": "deleteAboutGenesisImage",
+    "route_file": "routes/cms/aboutGenesisRoutes.js",
+    "controller_file": "controllers/cms/aboutGenesisController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/about-mission-vision",
+    "v1_path": "/api/v1/cms/about-mission-vision",
+    "legacy_path": "/api/cms/about-mission-vision",
+    "access": "Public",
+    "handler": "getAboutMissionVision",
+    "route_file": "routes/cms/aboutMissionVisionRoutes.js",
+    "controller_file": "controllers/cms/aboutMissionVisionController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/about-mission-vision",
+    "v1_path": "/api/v1/cms/about-mission-vision",
+    "legacy_path": "/api/cms/about-mission-vision",
+    "access": "Admin Bearer",
+    "handler": "updateAboutMissionVision",
+    "route_file": "routes/cms/aboutMissionVisionRoutes.js",
+    "controller_file": "controllers/cms/aboutMissionVisionController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "mission",
+      "vision"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/about-stats",
+    "v1_path": "/api/v1/cms/about-stats",
+    "legacy_path": "/api/cms/about-stats",
+    "access": "Public",
+    "handler": "getAboutStats",
+    "route_file": "routes/cms/aboutStatsRoutes.js",
+    "controller_file": "controllers/cms/aboutStatsController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/about-stats",
+    "v1_path": "/api/v1/cms/about-stats",
+    "legacy_path": "/api/cms/about-stats",
+    "access": "Admin Bearer",
+    "handler": "updateAboutStats",
+    "route_file": "routes/cms/aboutStatsRoutes.js",
+    "controller_file": "controllers/cms/aboutStatsController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "stats"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/about-visionaries",
+    "v1_path": "/api/v1/cms/about-visionaries",
+    "legacy_path": "/api/cms/about-visionaries",
+    "access": "Public",
+    "handler": "getVisionaries",
+    "route_file": "routes/cms/aboutVisionaryRoutes.js",
+    "controller_file": "controllers/cms/aboutVisionaryController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/about-visionaries/header",
+    "v1_path": "/api/v1/cms/about-visionaries/header",
+    "legacy_path": "/api/cms/about-visionaries/header",
+    "access": "Admin Bearer",
+    "handler": "updateVisionaryHeader",
+    "route_file": "routes/cms/aboutVisionaryRoutes.js",
+    "controller_file": "controllers/cms/aboutVisionaryController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "description",
+      "designation",
+      "name",
+      "sectionSubtitle",
+      "sectionTitle"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/cms/about-visionaries/member",
+    "v1_path": "/api/v1/cms/about-visionaries/member",
+    "legacy_path": "/api/cms/about-visionaries/member",
+    "access": "Admin Bearer",
+    "handler": "addVisionary",
+    "route_file": "routes/cms/aboutVisionaryRoutes.js",
+    "controller_file": "controllers/cms/aboutVisionaryController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "description",
+      "designation",
+      "name",
+      "sectionSubtitle",
+      "sectionTitle"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/about-visionaries/member/:id",
+    "v1_path": "/api/v1/cms/about-visionaries/member/:id",
+    "legacy_path": "/api/cms/about-visionaries/member/:id",
+    "access": "Admin Bearer",
+    "handler": "deleteVisionary",
+    "route_file": "routes/cms/aboutVisionaryRoutes.js",
+    "controller_file": "controllers/cms/aboutVisionaryController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/about-visionaries/member/:id",
+    "v1_path": "/api/v1/cms/about-visionaries/member/:id",
+    "legacy_path": "/api/cms/about-visionaries/member/:id",
+    "access": "Admin Bearer",
+    "handler": "updateVisionary",
+    "route_file": "routes/cms/aboutVisionaryRoutes.js",
+    "controller_file": "controllers/cms/aboutVisionaryController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "description",
+      "designation",
+      "name"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/agent-network",
+    "v1_path": "/api/v1/cms/agent-network",
+    "legacy_path": "/api/cms/agent-network",
+    "access": "Public",
+    "handler": "getAgentNetwork",
+    "route_file": "routes/cms/agentNetworkRoutes.js",
+    "controller_file": "controllers/cms/agentNetworkController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "designation",
+      "heading",
+      "name",
+      "review",
+      "topTitle"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/cms/agent-network/card",
+    "v1_path": "/api/v1/cms/agent-network/card",
+    "legacy_path": "/api/cms/agent-network/card",
+    "access": "Admin Bearer",
+    "handler": "addCard",
+    "route_file": "routes/cms/agentNetworkRoutes.js",
+    "controller_file": "controllers/cms/agentNetworkController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "designation",
+      "name",
+      "review"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/agent-network/card/:id",
+    "v1_path": "/api/v1/cms/agent-network/card/:id",
+    "legacy_path": "/api/cms/agent-network/card/:id",
+    "access": "Admin Bearer",
+    "handler": "deleteCard",
+    "route_file": "routes/cms/agentNetworkRoutes.js",
+    "controller_file": "controllers/cms/agentNetworkController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/agent-network/card/:id",
+    "v1_path": "/api/v1/cms/agent-network/card/:id",
+    "legacy_path": "/api/cms/agent-network/card/:id",
+    "access": "Admin Bearer",
+    "handler": "updateCard",
+    "route_file": "routes/cms/agentNetworkRoutes.js",
+    "controller_file": "controllers/cms/agentNetworkController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "designation",
+      "name",
+      "review"
+    ]
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/agent-network/heading",
+    "v1_path": "/api/v1/cms/agent-network/heading",
+    "legacy_path": "/api/cms/agent-network/heading",
+    "access": "Admin Bearer",
+    "handler": "updateHeading",
+    "route_file": "routes/cms/agentNetworkRoutes.js",
+    "controller_file": "controllers/cms/agentNetworkController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "designation",
+      "heading",
+      "name",
+      "review",
+      "topTitle"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/agentcorner",
+    "v1_path": "/api/v1/cms/agentcorner",
+    "legacy_path": "/api/cms/agentcorner",
+    "access": "Public",
+    "handler": "getAgentCorner",
+    "route_file": "routes/cms/agentCornerRoutes.js",
+    "controller_file": "controllers/cms/agentCornerController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/agentcorner",
+    "v1_path": "/api/v1/cms/agentcorner",
+    "legacy_path": "/api/cms/agentcorner",
+    "access": "Admin Bearer",
+    "handler": "updateAgentCorner",
+    "route_file": "routes/cms/agentCornerRoutes.js",
+    "controller_file": "controllers/cms/agentCornerController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "stats"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/hero",
+    "v1_path": "/api/v1/cms/hero",
+    "legacy_path": "/api/cms/hero",
+    "access": "Public",
+    "handler": "getHeroSection",
+    "route_file": "routes/cms/heroSectionRoutes.js",
+    "controller_file": "controllers/cms/heroSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/cms/hero",
+    "v1_path": "/api/v1/cms/hero",
+    "legacy_path": "/api/cms/hero",
+    "access": "Admin Bearer",
+    "handler": "saveHeroSection",
+    "route_file": "routes/cms/heroSectionRoutes.js",
+    "controller_file": "controllers/cms/heroSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "happyCustomers",
+      "headingLine1",
+      "headingLine2",
+      "localitiesCovered",
+      "propertiesListed",
+      "verifiedAgents"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/hero/image",
+    "v1_path": "/api/v1/cms/hero/image",
+    "legacy_path": "/api/cms/hero/image",
+    "access": "Admin Bearer",
+    "handler": "deleteHeroImage",
+    "route_file": "routes/cms/heroSectionRoutes.js",
+    "controller_file": "controllers/cms/heroSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "imageNo"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/network-density",
+    "v1_path": "/api/v1/cms/network-density",
+    "legacy_path": "/api/cms/network-density",
+    "access": "Public",
+    "handler": "getNetworkDensity",
+    "route_file": "routes/cms/networkDensityRoutes.js",
+    "controller_file": "controllers/cms/networkDensityController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/network-density",
+    "v1_path": "/api/v1/cms/network-density",
+    "legacy_path": "/api/cms/network-density",
+    "access": "Admin Bearer",
+    "handler": "updateNetworkDensity",
+    "route_file": "routes/cms/networkDensityRoutes.js",
+    "controller_file": "controllers/cms/networkDensityController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "cities",
+      "description",
+      "headingHighlight",
+      "headingLine1"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/plan-section",
+    "v1_path": "/api/v1/cms/plan-section",
+    "legacy_path": "/api/cms/plan-section",
+    "access": "Public",
+    "handler": "getPlanSection",
+    "route_file": "routes/cms/planSectionRoutes.js",
+    "controller_file": "controllers/cms/planSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/plan-section",
+    "v1_path": "/api/v1/cms/plan-section",
+    "legacy_path": "/api/cms/plan-section",
+    "access": "Admin Bearer",
+    "handler": "updatePlanSection",
+    "route_file": "routes/cms/planSectionRoutes.js",
+    "controller_file": "controllers/cms/planSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "heading",
+      "plans",
+      "topTitle"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/platform-features",
+    "v1_path": "/api/v1/cms/platform-features",
+    "legacy_path": "/api/cms/platform-features",
+    "access": "Public",
+    "handler": "getPlatformFeatures",
+    "route_file": "routes/cms/Platformroutes.js",
+    "controller_file": "controllers/cms/platformFeatureController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/cms/platform-features",
+    "v1_path": "/api/v1/cms/platform-features",
+    "legacy_path": "/api/cms/platform-features",
+    "access": "Admin Bearer",
+    "handler": "savePlatformFeatures",
+    "route_file": "routes/cms/Platformroutes.js",
+    "controller_file": "controllers/cms/platformFeatureController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "features",
+      "topTitle"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties",
+    "v1_path": "/api/v1/cms/properties",
+    "legacy_path": "/api/cms/properties",
+    "access": "Public",
+    "handler": "getAllProperties",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/cms/properties",
+    "v1_path": "/api/v1/cms/properties",
+    "legacy_path": "/api/cms/properties",
+    "access": "Admin Bearer",
+    "handler": "addProperty",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "amenities",
+      "floorPlan",
+      "reraCertificate",
+      "tags"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/properties/:id",
+    "v1_path": "/api/v1/cms/properties/:id",
+    "legacy_path": "/api/cms/properties/:id",
+    "access": "Admin Bearer",
+    "handler": "deleteProperty",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": [
+      "status"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties/:id",
+    "v1_path": "/api/v1/cms/properties/:id",
+    "legacy_path": "/api/cms/properties/:id",
+    "access": "Public",
+    "handler": "getPropertyById",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": [
+      "status"
+    ]
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/properties/:id",
+    "v1_path": "/api/v1/cms/properties/:id",
+    "legacy_path": "/api/cms/properties/:id",
+    "access": "Admin Bearer",
+    "handler": "updateProperty",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": [
+      "status"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/cms/properties/:id/status",
+    "v1_path": "/api/v1/cms/properties/:id/status",
+    "legacy_path": "/api/cms/properties/:id/status",
+    "access": "Admin Bearer",
+    "handler": "changePropertyStatus",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": [
+      "status"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties/dashboard/stats",
+    "v1_path": "/api/v1/cms/properties/dashboard/stats",
+    "legacy_path": "/api/cms/properties/dashboard/stats",
+    "access": "Public",
+    "handler": "propertyDashboard",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties/filter",
+    "v1_path": "/api/v1/cms/properties/filter",
+    "legacy_path": "/api/cms/properties/filter",
+    "access": "Public",
+    "handler": "getAllPropertiesbyfilter",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "propertyType",
+      "transactionType"
+    ],
+    "body": [
+      "status"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties/filter/list",
+    "v1_path": "/api/v1/cms/properties/filter/list",
+    "legacy_path": "/api/cms/properties/filter/list",
+    "access": "Public",
+    "handler": "filterProperties",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [
+      "category",
+      "city",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/properties/search/list",
+    "v1_path": "/api/v1/cms/properties/search/list",
+    "legacy_path": "/api/cms/properties/search/list",
+    "access": "Public",
+    "handler": "searchProperties",
+    "route_file": "routes/cms/propertyRoutes.js",
+    "controller_file": "controllers/cms/propertyController.js",
+    "path_params": [],
+    "query": [
+      "category",
+      "city",
+      "keyword",
+      "maxPrice",
+      "minPrice",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/round-section",
+    "v1_path": "/api/v1/cms/round-section",
+    "legacy_path": "/api/cms/round-section",
+    "access": "Public",
+    "handler": "getRoundSection",
+    "route_file": "routes/cms/roundSectionRoutes.js",
+    "controller_file": "controllers/cms/roundSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/cms/round-section",
+    "v1_path": "/api/v1/cms/round-section",
+    "legacy_path": "/api/cms/round-section",
+    "access": "Admin Bearer",
+    "handler": "saveRoundSection",
+    "route_file": "routes/cms/roundSectionRoutes.js",
+    "controller_file": "controllers/cms/roundSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/round-section/image",
+    "v1_path": "/api/v1/cms/round-section/image",
+    "legacy_path": "/api/cms/round-section/image",
+    "access": "Admin Bearer",
+    "handler": "deleteRoundImage",
+    "route_file": "routes/cms/roundSectionRoutes.js",
+    "controller_file": "controllers/cms/roundSectionController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "imageNo"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/cms/testimonials",
+    "v1_path": "/api/v1/cms/testimonials",
+    "legacy_path": "/api/cms/testimonials",
+    "access": "Public",
+    "handler": "getTestimonials",
+    "route_file": "routes/cms/testimonialRoutes.js",
+    "controller_file": "controllers/cms/testimonialController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/cms/testimonials",
+    "v1_path": "/api/v1/cms/testimonials",
+    "legacy_path": "/api/cms/testimonials",
+    "access": "Admin Bearer",
+    "handler": "createTestimonial",
+    "route_file": "routes/cms/testimonialRoutes.js",
+    "controller_file": "controllers/cms/testimonialController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "designation",
+      "name",
+      "review",
+      "videoLink"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/cms/testimonials/:id",
+    "v1_path": "/api/v1/cms/testimonials/:id",
+    "legacy_path": "/api/cms/testimonials/:id",
+    "access": "Admin Bearer",
+    "handler": "deleteTestimonial",
+    "route_file": "routes/cms/testimonialRoutes.js",
+    "controller_file": "controllers/cms/testimonialController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/cms/testimonials/:id",
+    "v1_path": "/api/v1/cms/testimonials/:id",
+    "legacy_path": "/api/cms/testimonials/:id",
+    "access": "Public",
+    "handler": "getSingleTestimonial",
+    "route_file": "routes/cms/testimonialRoutes.js",
+    "controller_file": "controllers/cms/testimonialController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PUT",
+    "path": "/cms/testimonials/:id",
+    "v1_path": "/api/v1/cms/testimonials/:id",
+    "legacy_path": "/api/cms/testimonials/:id",
+    "access": "Admin Bearer",
+    "handler": "updateTestimonial",
+    "route_file": "routes/cms/testimonialRoutes.js",
+    "controller_file": "controllers/cms/testimonialController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "designation",
+      "name",
+      "review",
+      "videoLink"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/credit-settings",
+    "v1_path": "/api/v1/credit-settings",
+    "legacy_path": "/api/credit-settings",
+    "access": "Bearer token",
+    "handler": "getCreditSettings",
+    "route_file": "routes/Credit/creditSettingRoutes.js",
+    "controller_file": "controllers/Credit/creditSettingController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/credit-settings",
+    "v1_path": "/api/v1/credit-settings",
+    "legacy_path": "/api/credit-settings",
+    "access": "Admin Bearer",
+    "handler": "updateCreditSettings",
+    "route_file": "routes/Credit/creditSettingRoutes.js",
+    "controller_file": "controllers/Credit/creditSettingController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "creditsPerRupee",
+      "products"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/credit-settings/product/:code",
+    "v1_path": "/api/v1/credit-settings/product/:code",
+    "legacy_path": "/api/credit-settings/product/:code",
+    "access": "Admin Bearer",
+    "handler": "updateCreditProduct",
+    "route_file": "routes/Credit/creditSettingRoutes.js",
+    "controller_file": "controllers/Credit/creditSettingController.js",
+    "path_params": [
+      "code"
+    ],
+    "query": [],
+    "body": [
+      "credits",
+      "durationDays",
+      "isActive"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/credit-settings/reset",
+    "v1_path": "/api/v1/credit-settings/reset",
+    "legacy_path": "/api/credit-settings/reset",
+    "access": "Admin Bearer",
+    "handler": "resetCreditSettings",
+    "route_file": "routes/Credit/creditSettingRoutes.js",
+    "controller_file": "controllers/Credit/creditSettingController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/credits/adjust",
+    "v1_path": "/api/v1/credits/adjust",
+    "legacy_path": "/api/credits/adjust",
+    "access": "Bearer token",
+    "handler": "adjustPartnerCredits",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/credits/admin/add",
+    "v1_path": "/api/v1/credits/admin/add",
+    "legacy_path": "/api/credits/admin/add",
+    "access": "Bearer token",
+    "handler": "addCreditsByAdmin",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/adminCreditController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "amount",
+      "amountInRupees",
+      "credits",
+      "partnerId",
+      "reason",
+      "reference",
+      "source"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/credits/admin/adjustments",
+    "v1_path": "/api/v1/credits/admin/adjustments",
+    "legacy_path": "/api/credits/admin/adjustments",
+    "access": "Bearer token",
+    "handler": "getAdminAdjustments",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/adminCreditController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "partnerId"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/credits/admin/bulk-add",
+    "v1_path": "/api/v1/credits/admin/bulk-add",
+    "legacy_path": "/api/credits/admin/bulk-add",
+    "access": "Bearer token",
+    "handler": "bulkAddCreditsByAdmin",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/adminCreditController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "allPartners",
+      "amount",
+      "credits",
+      "partnerIds",
+      "reason",
+      "reference",
+      "source"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/credits/admin/sync-wallets",
+    "v1_path": "/api/v1/credits/admin/sync-wallets",
+    "legacy_path": "/api/credits/admin/sync-wallets",
+    "access": "Bearer token",
+    "handler": "syncTeamWalletsByAdmin",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/adminCreditController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/credits/admin/withdraw",
+    "v1_path": "/api/v1/credits/admin/withdraw",
+    "legacy_path": "/api/credits/admin/withdraw",
+    "access": "Bearer token",
+    "handler": "withdrawCreditsByAdmin",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/adminCreditController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "amount",
+      "credits",
+      "partnerId",
+      "reason",
+      "reference",
+      "source"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/credits/dashboard",
+    "v1_path": "/api/v1/credits/dashboard",
+    "legacy_path": "/api/credits/dashboard",
+    "access": "Bearer token",
+    "handler": "getCreditDashboard",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/history",
+    "v1_path": "/api/v1/credits/history",
+    "legacy_path": "/api/credits/history",
+    "access": "Bearer token",
+    "handler": "getCreditHistory",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [
+      "direction",
+      "limit",
+      "page",
+      "partnerId",
+      "partnerMongoId",
+      "productCode",
+      "status",
+      "type"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/partner/:partnerId",
+    "v1_path": "/api/v1/credits/partner/:partnerId",
+    "legacy_path": "/api/credits/partner/:partnerId",
+    "access": "Bearer token",
+    "handler": "getPartnerWallet",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/partners",
+    "v1_path": "/api/v1/credits/partners",
+    "legacy_path": "/api/credits/partners",
+    "access": "Bearer token",
+    "handler": "getPartnerCreditOverview",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [
+      "limit",
+      "page",
+      "search"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/partners/:partnerId",
+    "v1_path": "/api/v1/credits/partners/:partnerId",
+    "legacy_path": "/api/credits/partners/:partnerId",
+    "access": "Bearer token",
+    "handler": "getPartnerCreditDetails",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/properties",
+    "v1_path": "/api/v1/credits/properties",
+    "legacy_path": "/api/credits/properties",
+    "access": "Bearer token",
+    "handler": "getPropertyCreditOverview",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [
+      "limit",
+      "page",
+      "search"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/credits/properties/:propertyId",
+    "v1_path": "/api/v1/credits/properties/:propertyId",
+    "legacy_path": "/api/credits/properties/:propertyId",
+    "access": "Bearer token",
+    "handler": "getPropertyCreditDetails",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [
+      "propertyId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/credits/purchase/complete",
+    "v1_path": "/api/v1/credits/purchase/complete",
+    "legacy_path": "/api/credits/purchase/complete",
+    "access": "Bearer token",
+    "handler": "completeCreditPurchase",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/credits/refund",
+    "v1_path": "/api/v1/credits/refund",
+    "legacy_path": "/api/credits/refund",
+    "access": "Bearer token",
+    "handler": "refundCredits",
+    "route_file": "routes/Credit/creditRoutes.js",
+    "controller_file": "controllers/Credit/creditController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/home/feed",
+    "v1_path": "/api/v1/home/feed",
+    "legacy_path": "/api/home/feed",
+    "access": "Bearer token",
+    "handler": "getHomeFeed",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/leads",
+    "v1_path": "/api/v1/leads",
+    "legacy_path": "/api/leads",
+    "access": "Bearer token",
+    "handler": "getLeads",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "partnerId",
+      "priority",
+      "search",
+      "source",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/leads",
+    "v1_path": "/api/v1/leads",
+    "legacy_path": "/api/leads",
+    "access": "Bearer token",
+    "handler": "createLead",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "createdBy",
+      "estimatedValue",
+      "message",
+      "priority",
+      "propertyId",
+      "source"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/leads/:id",
+    "v1_path": "/api/v1/leads/:id",
+    "legacy_path": "/api/leads/:id",
+    "access": "Bearer token",
+    "handler": "getLeadById",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/allocate-subpartner",
+    "v1_path": "/api/v1/leads/:id/allocate-subpartner",
+    "legacy_path": "/api/leads/:id/allocate-subpartner",
+    "access": "Bearer token",
+    "handler": "allocateLeadToSubPartner",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/assign-partner",
+    "v1_path": "/api/v1/leads/:id/assign-partner",
+    "legacy_path": "/api/leads/:id/assign-partner",
+    "access": "Bearer token",
+    "handler": "assignLeadPartner",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "partnerId",
+      "remarks"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/close",
+    "v1_path": "/api/v1/leads/:id/close",
+    "legacy_path": "/api/leads/:id/close",
+    "access": "Bearer token",
+    "handler": "closeLead",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "reason"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/leads/:id/contact-history",
+    "v1_path": "/api/v1/leads/:id/contact-history",
+    "legacy_path": "/api/leads/:id/contact-history",
+    "access": "Bearer token",
+    "handler": "addLeadContactHistory",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "contactedAt",
+      "doneBy",
+      "notes",
+      "status",
+      "type"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/convert",
+    "v1_path": "/api/v1/leads/:id/convert",
+    "legacy_path": "/api/leads/:id/convert",
+    "access": "Bearer token",
+    "handler": "convertLead",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "amount",
+      "notes"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/leads/:id/refund-request",
+    "v1_path": "/api/v1/leads/:id/refund-request",
+    "legacy_path": "/api/leads/:id/refund-request",
+    "access": "Bearer token",
+    "handler": "createLeadRefundRequest",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadRefundRequestController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "details",
+      "reason"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/reject",
+    "v1_path": "/api/v1/leads/:id/reject",
+    "legacy_path": "/api/leads/:id/reject",
+    "access": "Bearer token",
+    "handler": "rejectLead",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "reason"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/remove-subpartner-allocation",
+    "v1_path": "/api/v1/leads/:id/remove-subpartner-allocation",
+    "legacy_path": "/api/leads/:id/remove-subpartner-allocation",
+    "access": "Bearer token",
+    "handler": "removeLeadSubPartnerAllocation",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "remarks",
+      "teamPartnerId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/review",
+    "v1_path": "/api/v1/leads/:id/review",
+    "legacy_path": "/api/leads/:id/review",
+    "access": "Bearer token",
+    "handler": "reviewLead",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "notes"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/status",
+    "v1_path": "/api/v1/leads/:id/status",
+    "legacy_path": "/api/leads/:id/status",
+    "access": "Bearer token",
+    "handler": "updateLeadStatus",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "remarks",
+      "status"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/unlock",
+    "v1_path": "/api/v1/leads/:id/unlock",
+    "legacy_path": "/api/leads/:id/unlock",
+    "access": "Bearer token",
+    "handler": "unlockLeadByPartner",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "partnerId",
+      "remarks"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/:id/verify",
+    "v1_path": "/api/v1/leads/:id/verify",
+    "legacy_path": "/api/leads/:id/verify",
+    "access": "Bearer token",
+    "handler": "verifyLeadByAdmin",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "actor",
+      "notes"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/leads/dashboard",
+    "v1_path": "/api/v1/leads/dashboard",
+    "legacy_path": "/api/leads/dashboard",
+    "access": "Bearer token",
+    "handler": "getLeadDashboard",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/leads/from-property",
+    "v1_path": "/api/v1/leads/from-property",
+    "legacy_path": "/api/leads/from-property",
+    "access": "Bearer token",
+    "handler": "createLeadFromProperty",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "message",
+      "priority",
+      "propertyId",
+      "source"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/leads/partner/:partnerId",
+    "v1_path": "/api/v1/leads/partner/:partnerId",
+    "legacy_path": "/api/leads/partner/:partnerId",
+    "access": "Bearer token",
+    "handler": "getPartnerVisibleLeads",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/leads/partner/:partnerId/:id",
+    "v1_path": "/api/v1/leads/partner/:partnerId/:id",
+    "legacy_path": "/api/leads/partner/:partnerId/:id",
+    "access": "Bearer token",
+    "handler": "getPartnerVisibleLeadById",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadcontroller.js",
+    "path_params": [
+      "id",
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/leads/refund-requests",
+    "v1_path": "/api/v1/leads/refund-requests",
+    "legacy_path": "/api/leads/refund-requests",
+    "access": "Bearer token",
+    "handler": "getLeadRefundRequests",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadRefundRequestController.js",
+    "path_params": [],
+    "query": [
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/leads/refund-requests/:requestId/review",
+    "v1_path": "/api/v1/leads/refund-requests/:requestId/review",
+    "legacy_path": "/api/leads/refund-requests/:requestId/review",
+    "access": "Bearer token",
+    "handler": "reviewLeadRefundRequest",
+    "route_file": "routes/Lead/leadroutes.js",
+    "controller_file": "controllers/Lead/leadRefundRequestController.js",
+    "path_params": [
+      "requestId"
+    ],
+    "query": [],
+    "body": [
+      "remarks",
+      "status"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/locations/popular",
+    "v1_path": "/api/v1/locations/popular",
+    "legacy_path": "/api/locations/popular",
+    "access": "Bearer token",
+    "handler": "getPopularLocations",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [
+      "limit"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties",
+    "v1_path": "/api/v1/newproperties",
+    "legacy_path": "/api/newproperties",
+    "access": "Public",
+    "handler": "getFilteredLiveProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "bathrooms",
+      "bedrooms",
+      "category",
+      "city",
+      "furnishing",
+      "limit",
+      "maxPrice",
+      "minPrice",
+      "negotiable",
+      "page",
+      "price",
+      "propertyType",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/newproperties",
+    "v1_path": "/api/v1/newproperties",
+    "legacy_path": "/api/newproperties",
+    "access": "Bearer token",
+    "handler": "createProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "amenities",
+      "category",
+      "city",
+      "creatorId",
+      "creatorRole",
+      "negotiable",
+      "price",
+      "status",
+      "tags",
+      "title"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties/:id",
+    "v1_path": "/api/v1/newproperties/:id",
+    "legacy_path": "/api/newproperties/:id",
+    "access": "Public",
+    "handler": "getAdminPropertyById",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/newproperties/:id",
+    "v1_path": "/api/v1/newproperties/:id",
+    "legacy_path": "/api/newproperties/:id",
+    "access": "Bearer token",
+    "handler": "updateProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "existingImages",
+      "status",
+      "statusRemarks",
+      "updatedByName",
+      "updatedByRole",
+      "updatedByUserId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/newproperties/:id/boost",
+    "v1_path": "/api/v1/newproperties/:id/boost",
+    "legacy_path": "/api/newproperties/:id/boost",
+    "access": "Bearer token",
+    "handler": "boostProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "boostType",
+      "days"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/newproperties/:id/delete",
+    "v1_path": "/api/v1/newproperties/:id/delete",
+    "legacy_path": "/api/newproperties/:id/delete",
+    "access": "Bearer token",
+    "handler": "deleteProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/newproperties/:id/status",
+    "v1_path": "/api/v1/newproperties/:id/status",
+    "legacy_path": "/api/newproperties/:id/status",
+    "access": "Bearer token",
+    "handler": "updatePropertyStatus",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "notes",
+      "rejectionReason",
+      "status"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/newproperties/:id/unboost",
+    "v1_path": "/api/v1/newproperties/:id/unboost",
+    "legacy_path": "/api/newproperties/:id/unboost",
+    "access": "Bearer token",
+    "handler": "removePropertyBoost",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties/admin",
+    "v1_path": "/api/v1/newproperties/admin",
+    "legacy_path": "/api/newproperties/admin",
+    "access": "Bearer token",
+    "handler": "getAdminProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "boosted",
+      "partnerId",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties/all",
+    "v1_path": "/api/v1/newproperties/all",
+    "legacy_path": "/api/newproperties/all",
+    "access": "Bearer token",
+    "handler": "getAllProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "city",
+      "role",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties/filter",
+    "v1_path": "/api/v1/newproperties/filter",
+    "legacy_path": "/api/newproperties/filter",
+    "access": "Public",
+    "handler": "getFilteredLiveProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "bathrooms",
+      "bedrooms",
+      "category",
+      "city",
+      "furnishing",
+      "limit",
+      "maxPrice",
+      "minPrice",
+      "negotiable",
+      "page",
+      "price",
+      "propertyType",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/newproperties/partner/:partnerId",
+    "v1_path": "/api/v1/newproperties/partner/:partnerId",
+    "legacy_path": "/api/newproperties/partner/:partnerId",
+    "access": "Bearer token",
+    "handler": "getPropertiesByPartner",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partner-applications",
+    "v1_path": "/api/v1/partner-applications",
+    "legacy_path": "/api/partner-applications",
+    "access": "Admin Bearer",
+    "handler": "getPartnerApplications",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "accountType",
+      "agencyOwnerId",
+      "applicationStatus",
+      "parentPartnerId",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partner-applications/:id",
+    "v1_path": "/api/v1/partner-applications/:id",
+    "legacy_path": "/api/partner-applications/:id",
+    "access": "Admin Bearer",
+    "handler": "getPartnerApplicationById",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/action-required",
+    "v1_path": "/api/v1/partner-applications/:id/action-required",
+    "legacy_path": "/api/partner-applications/:id/action-required",
+    "access": "Admin Bearer",
+    "handler": "requestPartnerAction",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/approve",
+    "v1_path": "/api/v1/partner-applications/:id/approve",
+    "legacy_path": "/api/partner-applications/:id/approve",
+    "access": "Admin Bearer",
+    "handler": "approvePartnerApplication",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/reject",
+    "v1_path": "/api/v1/partner-applications/:id/reject",
+    "legacy_path": "/api/partner-applications/:id/reject",
+    "access": "Admin Bearer",
+    "handler": "rejectPartnerApplication",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/partner-applications/:id/resend-otp",
+    "v1_path": "/api/v1/partner-applications/:id/resend-otp",
+    "legacy_path": "/api/partner-applications/:id/resend-otp",
+    "access": "Public",
+    "handler": "resendPartnerOtp",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "channel"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/verify",
+    "v1_path": "/api/v1/partner-applications/:id/verify",
+    "legacy_path": "/api/partner-applications/:id/verify",
+    "access": "Admin Bearer",
+    "handler": "markPartnerVerified",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/verify-email",
+    "v1_path": "/api/v1/partner-applications/:id/verify-email",
+    "legacy_path": "/api/partner-applications/:id/verify-email",
+    "access": "Public",
+    "handler": "verifyPartnerEmailOtp",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "otp"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-applications/:id/verify-phone",
+    "v1_path": "/api/v1/partner-applications/:id/verify-phone",
+    "legacy_path": "/api/partner-applications/:id/verify-phone",
+    "access": "Public",
+    "handler": "verifyPartnerPhoneOtp",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "otp"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/partner-applications/register",
+    "v1_path": "/api/v1/partner-applications/register",
+    "legacy_path": "/api/partner-applications/register",
+    "access": "Public",
+    "handler": "registerPartnerApplication",
+    "route_file": "routes/Agent/partnerApplicationRoutes.js",
+    "controller_file": "controllers/Agent/partnerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partner-auth/change-password",
+    "v1_path": "/api/v1/partner-auth/change-password",
+    "legacy_path": "/api/partner-auth/change-password",
+    "access": "Bearer token",
+    "handler": "changePartnerPassword",
+    "route_file": "routes/Auth/partnerAuthRoutes.js",
+    "controller_file": "controllers/Auth/partnerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "currentPassword",
+      "newPassword"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/partner-auth/login",
+    "v1_path": "/api/v1/partner-auth/login",
+    "legacy_path": "/api/partner-auth/login",
+    "access": "Public",
+    "handler": "partnerLogin",
+    "route_file": "routes/Auth/partnerAuthRoutes.js",
+    "controller_file": "controllers/Auth/partnerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email",
+      "password"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/partners",
+    "v1_path": "/api/v1/partners",
+    "legacy_path": "/api/partners",
+    "access": "Admin Bearer",
+    "handler": "getAllPartners",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "accountType",
+      "search"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partners/:id",
+    "v1_path": "/api/v1/partners/:id",
+    "legacy_path": "/api/partners/:id",
+    "access": "Admin Bearer",
+    "handler": "getPartnerById",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partners/:id/block",
+    "v1_path": "/api/v1/partners/:id/block",
+    "legacy_path": "/api/partners/:id/block",
+    "access": "Admin Bearer",
+    "handler": "blockPartner",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "isBlocked"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/partners/approved-not-verified",
+    "v1_path": "/api/v1/partners/approved-not-verified",
+    "legacy_path": "/api/partners/approved-not-verified",
+    "access": "Admin Bearer",
+    "handler": "getApprovedNotVerifiedPartners",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "DELETE",
+    "path": "/partners/delete/:id",
+    "v1_path": "/api/v1/partners/delete/:id",
+    "legacy_path": "/api/partners/delete/:id",
+    "access": "Admin Bearer",
+    "handler": "deletePartner",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partners/partners/available",
+    "v1_path": "/api/v1/partners/partners/available",
+    "legacy_path": "/api/partners/partners/available",
+    "access": "Admin Bearer",
+    "handler": "getAvailablePartners",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [
+      "accountType",
+      "city"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partners/properties",
+    "v1_path": "/api/v1/partners/properties",
+    "legacy_path": "/api/partners/properties",
+    "access": "Admin Bearer",
+    "handler": "getAssignmentProperties",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "assignment"
+    ],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/partners/properties/:propertyId/assign",
+    "v1_path": "/api/v1/partners/properties/:propertyId/assign",
+    "legacy_path": "/api/partners/properties/:propertyId/assign",
+    "access": "Admin Bearer",
+    "handler": "assignPartnerToProperty",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "propertyId"
+    ],
+    "query": [],
+    "body": [
+      "partnerId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/partners/properties/:propertyId/assign-partner",
+    "v1_path": "/api/v1/partners/properties/:propertyId/assign-partner",
+    "legacy_path": "/api/partners/properties/:propertyId/assign-partner",
+    "access": "Admin Bearer",
+    "handler": "assignPartnerToProperty",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "propertyId"
+    ],
+    "query": [],
+    "body": [
+      "partnerId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/partners/properties/:propertyId/unassign",
+    "v1_path": "/api/v1/partners/properties/:propertyId/unassign",
+    "legacy_path": "/api/partners/properties/:propertyId/unassign",
+    "access": "Admin Bearer",
+    "handler": "unassignPartnerFromProperty",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [
+      "propertyId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partners/properties/unassigned",
+    "v1_path": "/api/v1/partners/properties/unassigned",
+    "legacy_path": "/api/partners/properties/unassigned",
+    "access": "Admin Bearer",
+    "handler": "getUnassignedProperties",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/partners/summary",
+    "v1_path": "/api/v1/partners/summary",
+    "legacy_path": "/api/partners/summary",
+    "access": "Admin Bearer",
+    "handler": "getAssignmentSummary",
+    "route_file": "routes/Agent/partnerRoutes.js",
+    "controller_file": "controllers/Agent/partnerController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/promotions",
+    "v1_path": "/api/v1/promotions",
+    "legacy_path": "/api/promotions",
+    "access": "Bearer token",
+    "handler": "getPromotionRequests",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/promotions",
+    "v1_path": "/api/v1/promotions",
+    "legacy_path": "/api/promotions",
+    "access": "Bearer token",
+    "handler": "createPromotionRequest",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "partnerId",
+      "partnerMongoId",
+      "promotionType",
+      "propertyId",
+      "propertyMongoId",
+      "search",
+      "status",
+      "targetType"
+    ],
+    "body": [
+      "idempotencyKey",
+      "locality",
+      "partnerId",
+      "promotionType",
+      "propertyId",
+      "remarks",
+      "targetType"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/promotions/:id/approve",
+    "v1_path": "/api/v1/promotions/:id/approve",
+    "legacy_path": "/api/promotions/:id/approve",
+    "access": "Bearer token",
+    "handler": "approvePromotionRequest",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "remarks"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/promotions/:id/reject",
+    "v1_path": "/api/v1/promotions/:id/reject",
+    "legacy_path": "/api/promotions/:id/reject",
+    "access": "Bearer token",
+    "handler": "rejectPromotionRequest",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "remarks"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/promotions/maintenance/expire",
+    "v1_path": "/api/v1/promotions/maintenance/expire",
+    "legacy_path": "/api/promotions/maintenance/expire",
+    "access": "Bearer token",
+    "handler": "expirePromotions",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/promotions/my",
+    "v1_path": "/api/v1/promotions/my",
+    "legacy_path": "/api/promotions/my",
+    "access": "Bearer token",
+    "handler": "getMyPromotionRequests",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/promotions/partner/request",
+    "v1_path": "/api/v1/promotions/partner/request",
+    "legacy_path": "/api/promotions/partner/request",
+    "access": "Bearer token",
+    "handler": "createPromotionRequest",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "partnerId",
+      "partnerMongoId",
+      "promotionType",
+      "propertyId",
+      "propertyMongoId",
+      "search",
+      "status",
+      "targetType"
+    ],
+    "body": [
+      "idempotencyKey",
+      "locality",
+      "partnerId",
+      "promotionType",
+      "propertyId",
+      "remarks",
+      "targetType"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/promotions/property/request",
+    "v1_path": "/api/v1/promotions/property/request",
+    "legacy_path": "/api/promotions/property/request",
+    "access": "Bearer token",
+    "handler": "createPromotionRequest",
+    "route_file": "routes/Promotion/promotionRoutes.js",
+    "controller_file": "controllers/Promotion/promotionV2Controller.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "limit",
+      "page",
+      "partnerId",
+      "partnerMongoId",
+      "promotionType",
+      "propertyId",
+      "propertyMongoId",
+      "search",
+      "status",
+      "targetType"
+    ],
+    "body": [
+      "idempotencyKey",
+      "locality",
+      "partnerId",
+      "promotionType",
+      "propertyId",
+      "remarks",
+      "targetType"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/properties",
+    "v1_path": "/api/v1/properties",
+    "legacy_path": "/api/properties",
+    "access": "Public",
+    "handler": "getFilteredLiveProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "bathrooms",
+      "bedrooms",
+      "category",
+      "city",
+      "furnishing",
+      "limit",
+      "maxPrice",
+      "minPrice",
+      "negotiable",
+      "page",
+      "price",
+      "propertyType",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/properties",
+    "v1_path": "/api/v1/properties",
+    "legacy_path": "/api/properties",
+    "access": "Bearer token",
+    "handler": "createProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "amenities",
+      "category",
+      "city",
+      "creatorId",
+      "creatorRole",
+      "negotiable",
+      "price",
+      "status",
+      "tags",
+      "title"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/properties/:id",
+    "v1_path": "/api/v1/properties/:id",
+    "legacy_path": "/api/properties/:id",
+    "access": "Public",
+    "handler": "getAdminPropertyById",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/properties/:id",
+    "v1_path": "/api/v1/properties/:id",
+    "legacy_path": "/api/properties/:id",
+    "access": "Bearer token",
+    "handler": "updateProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "existingImages",
+      "status",
+      "statusRemarks",
+      "updatedByName",
+      "updatedByRole",
+      "updatedByUserId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/properties/:id/boost",
+    "v1_path": "/api/v1/properties/:id/boost",
+    "legacy_path": "/api/properties/:id/boost",
+    "access": "Bearer token",
+    "handler": "boostProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "boostType",
+      "days"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/properties/:id/delete",
+    "v1_path": "/api/v1/properties/:id/delete",
+    "legacy_path": "/api/properties/:id/delete",
+    "access": "Bearer token",
+    "handler": "deleteProperty",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/properties/:id/status",
+    "v1_path": "/api/v1/properties/:id/status",
+    "legacy_path": "/api/properties/:id/status",
+    "access": "Bearer token",
+    "handler": "updatePropertyStatus",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "notes",
+      "rejectionReason",
+      "status"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/properties/:id/unboost",
+    "v1_path": "/api/v1/properties/:id/unboost",
+    "legacy_path": "/api/properties/:id/unboost",
+    "access": "Bearer token",
+    "handler": "removePropertyBoost",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/admin",
+    "v1_path": "/api/v1/properties/admin",
+    "legacy_path": "/api/properties/admin",
+    "access": "Bearer token",
+    "handler": "getAdminProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "boosted",
+      "partnerId",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/all",
+    "v1_path": "/api/v1/properties/all",
+    "legacy_path": "/api/properties/all",
+    "access": "Bearer token",
+    "handler": "getAllProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "city",
+      "role",
+      "search",
+      "status"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/boosted",
+    "v1_path": "/api/v1/properties/boosted",
+    "legacy_path": "/api/properties/boosted",
+    "access": "Bearer token",
+    "handler": "getBoostedProperties",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [
+      "limit"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/categories",
+    "v1_path": "/api/v1/properties/categories",
+    "legacy_path": "/api/properties/categories",
+    "access": "Bearer token",
+    "handler": "getPropertyCategories",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [
+      "category",
+      "limit",
+      "tab"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/explore-nearby",
+    "v1_path": "/api/v1/properties/explore-nearby",
+    "legacy_path": "/api/properties/explore-nearby",
+    "access": "Bearer token",
+    "handler": "exploreNearby",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/nearbyController.js",
+    "path_params": [],
+    "query": [
+      "propertyId",
+      "radius"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/filter",
+    "v1_path": "/api/v1/properties/filter",
+    "legacy_path": "/api/properties/filter",
+    "access": "Public",
+    "handler": "getFilteredLiveProperties",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "bathrooms",
+      "bedrooms",
+      "category",
+      "city",
+      "furnishing",
+      "limit",
+      "maxPrice",
+      "minPrice",
+      "negotiable",
+      "page",
+      "price",
+      "propertyType",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/new-listings",
+    "v1_path": "/api/v1/properties/new-listings",
+    "legacy_path": "/api/properties/new-listings",
+    "access": "Bearer token",
+    "handler": "getNewListings",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [
+      "limit"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/properties/partner/:partnerId",
+    "v1_path": "/api/v1/properties/partner/:partnerId",
+    "legacy_path": "/api/properties/partner/:partnerId",
+    "access": "Bearer token",
+    "handler": "getPropertiesByPartner",
+    "route_file": "routes/Property/propertyRoutes.js",
+    "controller_file": "controllers/Property/propertyController.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/property-publishing/:id/final-review",
+    "v1_path": "/api/v1/property-publishing/:id/final-review",
+    "legacy_path": "/api/property-publishing/:id/final-review",
+    "access": "Admin Bearer",
+    "handler": "getFinalReviewPropertyById",
+    "route_file": "routes/Property/propertyPublishingRoutes.js",
+    "controller_file": "controllers/Property/propertyPublishingController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/property-publishing/:id/make-live",
+    "v1_path": "/api/v1/property-publishing/:id/make-live",
+    "legacy_path": "/api/property-publishing/:id/make-live",
+    "access": "Admin Bearer",
+    "handler": "makePropertyLiveAfterFinalReview",
+    "route_file": "routes/Property/propertyPublishingRoutes.js",
+    "controller_file": "controllers/Property/propertyPublishingController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "notes"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/property-publishing/live",
+    "v1_path": "/api/v1/property-publishing/live",
+    "legacy_path": "/api/property-publishing/live",
+    "access": "Admin Bearer",
+    "handler": "getLivePublishingProperties",
+    "route_file": "routes/Property/propertyPublishingRoutes.js",
+    "controller_file": "controllers/Property/propertyPublishingController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "category",
+      "city",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/property-publishing/ready",
+    "v1_path": "/api/v1/property-publishing/ready",
+    "legacy_path": "/api/property-publishing/ready",
+    "access": "Admin Bearer",
+    "handler": "getReadyForFinalReviewProperties",
+    "route_file": "routes/Property/propertyPublishingRoutes.js",
+    "controller_file": "controllers/Property/propertyPublishingController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "category",
+      "city",
+      "search",
+      "transactionType"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/property-publishing/summary",
+    "v1_path": "/api/v1/property-publishing/summary",
+    "legacy_path": "/api/property-publishing/summary",
+    "access": "Admin Bearer",
+    "handler": "getPropertyPublishingSummary",
+    "route_file": "routes/Property/propertyPublishingRoutes.js",
+    "controller_file": "controllers/Property/propertyPublishingController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/saved-properties",
+    "v1_path": "/api/v1/saved-properties",
+    "legacy_path": "/api/saved-properties",
+    "access": "Bearer token",
+    "handler": "saveProperty",
+    "route_file": "routes/buyer/savedPropertyRoutes.js",
+    "controller_file": "controllers/Buyer/savedPropertyController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "buyerId",
+      "propertyId"
+    ]
+  },
+  {
+    "method": "DELETE",
+    "path": "/saved-properties/:buyerId/:propertyId",
+    "v1_path": "/api/v1/saved-properties/:buyerId/:propertyId",
+    "legacy_path": "/api/saved-properties/:buyerId/:propertyId",
+    "access": "Bearer token",
+    "handler": "removeSavedProperty",
+    "route_file": "routes/buyer/savedPropertyRoutes.js",
+    "controller_file": "controllers/Buyer/savedPropertyController.js",
+    "path_params": [
+      "buyerId",
+      "propertyId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/saved-properties/buyer/:buyerId",
+    "v1_path": "/api/v1/saved-properties/buyer/:buyerId",
+    "legacy_path": "/api/saved-properties/buyer/:buyerId",
+    "access": "Bearer token",
+    "handler": "getBuyerSavedProperties",
+    "route_file": "routes/buyer/savedPropertyRoutes.js",
+    "controller_file": "controllers/Buyer/savedPropertyController.js",
+    "path_params": [
+      "buyerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/saved-properties/check/:buyerId/:propertyId",
+    "v1_path": "/api/v1/saved-properties/check/:buyerId/:propertyId",
+    "legacy_path": "/api/saved-properties/check/:buyerId/:propertyId",
+    "access": "Bearer token",
+    "handler": "checkSavedProperty",
+    "route_file": "routes/buyer/savedPropertyRoutes.js",
+    "controller_file": "controllers/Buyer/savedPropertyController.js",
+    "path_params": [
+      "buyerId",
+      "propertyId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/sellers",
+    "v1_path": "/api/v1/sellers",
+    "legacy_path": "/api/sellers",
+    "access": "Bearer token",
+    "handler": "getAllSellers",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerController.js",
+    "path_params": [],
+    "query": [
+      "$or",
+      "city",
+      "isVerified",
+      "search",
+      "verified"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/sellers/:id",
+    "v1_path": "/api/v1/sellers/:id",
+    "legacy_path": "/api/sellers/:id",
+    "access": "Bearer token",
+    "handler": "getSellerById",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/sellers/:id/properties",
+    "v1_path": "/api/v1/sellers/:id/properties",
+    "legacy_path": "/api/sellers/:id/properties",
+    "access": "Bearer token",
+    "handler": "getSellerProperties",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/sellers/:id/summary",
+    "v1_path": "/api/v1/sellers/:id/summary",
+    "legacy_path": "/api/sellers/:id/summary",
+    "access": "Bearer token",
+    "handler": "getSellerSummary",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/sellers/:sellerId/properties/:propertyId",
+    "v1_path": "/api/v1/sellers/:sellerId/properties/:propertyId",
+    "legacy_path": "/api/sellers/:sellerId/properties/:propertyId",
+    "access": "Bearer token",
+    "handler": "getSellerPropertyById",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerController.js",
+    "path_params": [
+      "propertyId",
+      "sellerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/applications/register",
+    "v1_path": "/api/v1/sellers/applications/register",
+    "legacy_path": "/api/sellers/applications/register",
+    "access": "Public",
+    "handler": "createSellerApplication",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "address",
+      "city",
+      "country",
+      "email",
+      "latitude",
+      "longitude",
+      "name",
+      "phone",
+      "pinCode",
+      "state"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/applications/resend-email-otp",
+    "v1_path": "/api/v1/sellers/applications/resend-email-otp",
+    "legacy_path": "/api/sellers/applications/resend-email-otp",
+    "access": "Public",
+    "handler": "resendSellerEmailOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "applicationId"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/applications/resend-phone-otp",
+    "v1_path": "/api/v1/sellers/applications/resend-phone-otp",
+    "legacy_path": "/api/sellers/applications/resend-phone-otp",
+    "access": "Public",
+    "handler": "resendSellerPhoneOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "applicationId"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/applications/verify-email",
+    "v1_path": "/api/v1/sellers/applications/verify-email",
+    "legacy_path": "/api/sellers/applications/verify-email",
+    "access": "Public",
+    "handler": "verifySellerEmailOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "applicationId",
+      "otp"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/applications/verify-phone",
+    "v1_path": "/api/v1/sellers/applications/verify-phone",
+    "legacy_path": "/api/sellers/applications/verify-phone",
+    "access": "Public",
+    "handler": "verifySellerPhoneOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerApplicationController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "applicationId",
+      "otp"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/sellers/auth/change-password",
+    "v1_path": "/api/v1/sellers/auth/change-password",
+    "legacy_path": "/api/sellers/auth/change-password",
+    "access": "Bearer token",
+    "handler": "changeSellerPassword",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "currentPassword",
+      "newPassword"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/auth/login",
+    "v1_path": "/api/v1/sellers/auth/login",
+    "legacy_path": "/api/sellers/auth/login",
+    "access": "Public",
+    "handler": "sellerLogin",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email",
+      "password"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/auth/login-with-otp",
+    "v1_path": "/api/v1/sellers/auth/login-with-otp",
+    "legacy_path": "/api/sellers/auth/login-with-otp",
+    "access": "Public",
+    "handler": "sellerLoginWithOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email",
+      "otp"
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/sellers/auth/send-login-otp",
+    "v1_path": "/api/v1/sellers/auth/send-login-otp",
+    "legacy_path": "/api/sellers/auth/send-login-otp",
+    "access": "Public",
+    "handler": "sendSellerLoginOtp",
+    "route_file": "routes/Seller/sellerRoutes.js",
+    "controller_file": "controllers/Seller/sellerAuthController.js",
+    "path_params": [],
+    "query": [],
+    "body": [
+      "email"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/team-partners",
+    "v1_path": "/api/v1/team-partners",
+    "legacy_path": "/api/team-partners",
+    "access": "Bearer token",
+    "handler": "getTeamPartners",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/team-partners/:ownerId/members",
+    "v1_path": "/api/v1/team-partners/:ownerId/members",
+    "legacy_path": "/api/team-partners/:ownerId/members",
+    "access": "Bearer token",
+    "handler": "addTeamMember",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "ownerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/team-partners/:ownerId/members/:memberId/allocate-credits",
+    "v1_path": "/api/v1/team-partners/:ownerId/members/:memberId/allocate-credits",
+    "legacy_path": "/api/team-partners/:ownerId/members/:memberId/allocate-credits",
+    "access": "Bearer token",
+    "handler": "allocateTeamCredits",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "memberId",
+      "ownerId"
+    ],
+    "query": [],
+    "body": [
+      "approvalThreshold",
+      "credits"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/team-partners/:ownerId/members/:memberId/credit-history",
+    "v1_path": "/api/v1/team-partners/:ownerId/members/:memberId/credit-history",
+    "legacy_path": "/api/team-partners/:ownerId/members/:memberId/credit-history",
+    "access": "Bearer token",
+    "handler": "getTeamMemberCreditHistory",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "memberId",
+      "ownerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/team-partners/:ownerId/properties",
+    "v1_path": "/api/v1/team-partners/:ownerId/properties",
+    "legacy_path": "/api/team-partners/:ownerId/properties",
+    "access": "Bearer token",
+    "handler": "getTeamAssignedProperties",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "ownerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/team-partners/:ownerId/properties/:propertyId/delegate",
+    "v1_path": "/api/v1/team-partners/:ownerId/properties/:propertyId/delegate",
+    "legacy_path": "/api/team-partners/:ownerId/properties/:propertyId/delegate",
+    "access": "Bearer token",
+    "handler": "delegatePropertyToSubAgent",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "ownerId",
+      "propertyId"
+    ],
+    "query": [],
+    "body": [
+      "subPartnerId"
+    ]
+  },
+  {
+    "method": "PATCH",
+    "path": "/team-partners/:ownerId/properties/:propertyId/remove-delegation",
+    "v1_path": "/api/v1/team-partners/:ownerId/properties/:propertyId/remove-delegation",
+    "legacy_path": "/api/team-partners/:ownerId/properties/:propertyId/remove-delegation",
+    "access": "Bearer token",
+    "handler": "removeSubAgentPropertyDelegation",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "ownerId",
+      "propertyId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/team-partners/:ownerId/verified-members",
+    "v1_path": "/api/v1/team-partners/:ownerId/verified-members",
+    "legacy_path": "/api/team-partners/:ownerId/verified-members",
+    "access": "Bearer token",
+    "handler": "getVerifiedTeamMembers",
+    "route_file": "routes/Agent/teamPartnerRoutes.js",
+    "controller_file": "controllers/Agent/teamPartnerController.js",
+    "path_params": [
+      "ownerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/user/dashboard-header",
+    "v1_path": "/api/v1/user/dashboard-header",
+    "legacy_path": "/api/user/dashboard-header",
+    "access": "Bearer token",
+    "handler": "getDashboardHeader",
+    "route_file": "routes/V1/publicAppRoutes.js",
+    "controller_file": "controllers/V1/homeController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/visits/:id",
+    "v1_path": "/api/v1/visits/:id",
+    "legacy_path": "/api/visits/:id",
+    "access": "Bearer token",
+    "handler": "getVisitById",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/visits/:id/review",
+    "v1_path": "/api/v1/visits/:id/review",
+    "legacy_path": "/api/visits/:id/review",
+    "access": "Bearer token",
+    "handler": "reviewVisitRequest",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/visits/:id/status",
+    "v1_path": "/api/v1/visits/:id/status",
+    "legacy_path": "/api/visits/:id/status",
+    "access": "Bearer token",
+    "handler": "updateVisitStatus",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "PATCH",
+    "path": "/visits/:id/team-review",
+    "v1_path": "/api/v1/visits/:id/team-review",
+    "legacy_path": "/api/visits/:id/team-review",
+    "access": "Bearer token",
+    "handler": "reviewSubAgentVisitByTeamOwner",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "id"
+    ],
+    "query": [],
+    "body": [
+      "action",
+      "remarks",
+      "teamOwnerId"
+    ]
+  },
+  {
+    "method": "GET",
+    "path": "/visits/admin",
+    "v1_path": "/api/v1/visits/admin",
+    "legacy_path": "/api/visits/admin",
+    "access": "Bearer token",
+    "handler": "getAdminVisits",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [],
+    "query": [
+      "approvalStatus",
+      "buyerId",
+      "limit",
+      "location",
+      "page",
+      "partnerId",
+      "propertyId",
+      "search",
+      "status",
+      "tab"
+    ],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/visits/partner/:partnerId",
+    "v1_path": "/api/v1/visits/partner/:partnerId",
+    "legacy_path": "/api/visits/partner/:partnerId",
+    "access": "Bearer token",
+    "handler": "getVisitsByPartner",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "partnerId"
+    ],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "POST",
+    "path": "/visits/request",
+    "v1_path": "/api/v1/visits/request",
+    "legacy_path": "/api/visits/request",
+    "access": "Bearer token",
+    "handler": "createVisitRequest",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/visits/summary",
+    "v1_path": "/api/v1/visits/summary",
+    "legacy_path": "/api/visits/summary",
+    "access": "Bearer token",
+    "handler": "getVisitSummary",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [],
+    "query": [],
+    "body": []
+  },
+  {
+    "method": "GET",
+    "path": "/visits/team/:ownerId/pending",
+    "v1_path": "/api/v1/visits/team/:ownerId/pending",
+    "legacy_path": "/api/visits/team/:ownerId/pending",
+    "access": "Bearer token",
+    "handler": "getTeamPendingVisitRequests",
+    "route_file": "routes/Visit/visitRoutes.js",
+    "controller_file": "controllers/Visit/visitController.js",
+    "path_params": [
+      "ownerId"
+    ],
+    "query": [],
+    "body": []
+  }
+]

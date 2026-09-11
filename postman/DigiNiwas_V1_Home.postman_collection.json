@@ -1,0 +1,431 @@
+{
+  "info": {
+    "name": "DigiNiwas V1 Home APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "buyerToken",
+      "value": ""
+    },
+    {
+      "key": "buyerPassword",
+      "value": ""
+    },
+    {
+      "key": "lat",
+      "value": "19.1197"
+    },
+    {
+      "key": "lng",
+      "value": "72.8464"
+    },
+    {
+      "key": "city",
+      "value": "Mumbai"
+    },
+    {
+      "key": "propertyId",
+      "value": "DW-1002"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 Buyer Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"phone\": \"9876543210\",\n  \"password\": \"{{buyerPassword}}\",\n  \"role\": \"buyer\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/auths/login-password",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auths",
+            "login-password"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json.token) pm.collectionVariables.set(\"buyerToken\", json.token);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Home Feed",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/home/feed?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "home",
+            "feed"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "03 Dashboard Header",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/user/dashboard-header?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "dashboard-header"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "04 Categories - Buy",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/properties/categories?tab=Buy&lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "categories"
+          ],
+          "query": [
+            {
+              "key": "tab",
+              "value": "Buy"
+            },
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "05 Categories - Residential",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/properties/categories?category=Residential&lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "categories"
+          ],
+          "query": [
+            {
+              "key": "category",
+              "value": "Residential"
+            },
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "06 Boosted Properties",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/properties/boosted?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "boosted"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "07 Explore Nearby",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/properties/explore-nearby?propertyId={{propertyId}}&radius=3000",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "explore-nearby"
+          ],
+          "query": [
+            {
+              "key": "propertyId",
+              "value": "{{propertyId}}"
+            },
+            {
+              "key": "radius",
+              "value": "3000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "08 New Listings",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/properties/new-listings?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "properties",
+            "new-listings"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "09 Popular Locations",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/locations/popular?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "locations",
+            "popular"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "10 Nearby Agents",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{buyerToken}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/agents/nearby?lat={{lat}}&lng={{lng}}&city={{city}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agents",
+            "nearby"
+          ],
+          "query": [
+            {
+              "key": "lat",
+              "value": "{{lat}}"
+            },
+            {
+              "key": "lng",
+              "value": "{{lng}}"
+            },
+            {
+              "key": "city",
+              "value": "{{city}}"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
